@@ -34,7 +34,7 @@ This project calculates foot sizes using a reference coin and generates a PDF re
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/xer0bit/feet-measurement-report-generator.git](https://github.com/Xer0bit/BRP-SizeMeasure
+    git clone https://github.com/Xer0bit/BRP-SizeMeasure
     cd feet-measurement-report-generator
     ```
 
