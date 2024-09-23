@@ -1,6 +1,6 @@
 # Feet Measurement Report Generator
 
-This project is about calculating the size of feet using a reference coin. It generates a PDF report containing measurements of feet detected in an image, using object detection models and background removal. The report includes marked images and calculated dimensions, providing a detailed analysis of the detected objects.
+This project calculates foot sizes using a reference coin and generates a PDF report with measurements of detected feet from an image. The report includes marked images and calculated dimensions, providing a detailed analysis of the detected objects.
 
 ## Table of Contents
 
@@ -8,6 +8,7 @@ This project is about calculating the size of feet using a reference coin. It ge
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Example Images](#example-images)
 - [File Structure](#file-structure)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
@@ -71,25 +72,22 @@ This project is about calculating the size of feet using a reference coin. It ge
 3. **View the generated PDF**:
     The PDF report will be saved to the path specified in `output_pdf_path`.
 
+## Example Images
+
+### Input Image
+![Input Image](https://github.com/Xer0bit/BRP-SizeMeasure/blob/main/temp/aed3f5b6-66be-49cb-85b7-8d26701dc2a5/img2.png)
+
+### Output PDF Report (Final Result)
+![Output PDF Report](path/to/output_report_sample.jpg)
+
 ## File Structure
-feet-measurement-report-generator/
-├── models/
-│ ├── feet.pt
-│ └── coin.pt
-├── image_processing.py
-├── pdf_report.py
-├── requirements.txt
-├── README.md
-└── example_usage.py
 
-
-
-- `models/`: Directory containing the YOLO model files.
-- `image_processing.py`: Script for image loading, background removal, and object detection.
-- `pdf_report.py`: Script for generating the PDF report.
-- `requirements.txt`: List of required Python packages.
-- `README.md`: Project documentation.
-- `example_usage.py`: Example script demonstrating how to use the project.
+- **`models/`**: Directory containing the YOLO model files.
+- **`image_processing.py`**: Script for image loading, background removal, and object detection.
+- **`pdf_report.py`**: Script for generating the PDF report.
+- **`requirements.txt`**: List of required Python packages.
+- **`README.md`**: Project documentation.
+- **`example_usage.py`**: Example script demonstrating how to use the project.
 
 ## Acknowledgments
 
@@ -99,4 +97,3 @@ feet-measurement-report-generator/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
