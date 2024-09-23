@@ -29,13 +29,12 @@ This project calculates foot sizes using a reference coin and generates a PDF re
 - matplotlib
 - ultralytics
 - flask
-- rembg
 
 ## Installation
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/xer0bit/feet-measurement-report-generator.git
+    git clone https://github.com/xer0bit/feet-measurement-report-generator.git](https://github.com/Xer0bit/BRP-SizeMeasure
     cd feet-measurement-report-generator
     ```
 
