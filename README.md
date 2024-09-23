@@ -75,7 +75,7 @@ This project calculates foot sizes using a reference coin and generates a PDF re
 ## Example Images
 
 ### Input Image
-![Input Image](https://github.com/Xer0bit/BRP-SizeMeasure/blob/main/temp/aed3f5b6-66be-49cb-85b7-8d26701dc2a5/img2.png)
+![Input Image](https://github.com/Xer0bit/BRP-SizeMeasure/blob/main/temp/aed3f5b6-66be-49cb-85b7-8d26701dc2a5/input.png)
 
 ### Output PDF Report (Final Result)
 ![Output PDF Report](https://github.com/Xer0bit/BRP-SizeMeasure/blob/main/temp/aed3f5b6-66be-49cb-85b7-8d26701dc2a5/output.png)
