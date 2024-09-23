@@ -90,6 +90,9 @@ This project calculates foot sizes using a reference coin and generates a PDF re
 
 ## Acknowledgments
 
+- [YOLO](https://github.com/ultralytics/yolov5) for the object detection models.
+- [OpenCV](https://opencv.org/) and [NumPy](https://numpy.org/) for image processing.
+
 ## Request Model
 
 For using the YOLO models, ensure that you have the appropriate `.pt` files for both feet and coins. You can download the pre-trained models from the [MODELS](https://drive.google.com/file/d/1h-8lsIfJgZgJalnQuRw_cWcRR2zWONqJ/view?usp=sharing).
