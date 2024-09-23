@@ -1,0 +1,119 @@
+[2024-07-22 06:31:50 +0000] [16720] [INFO] Starting gunicorn 22.0.0
+[2024-07-22 06:31:50 +0000] [16720] [INFO] Listening at: http://0.0.0.0:5000 (16720)
+[2024-07-22 06:31:50 +0000] [16720] [INFO] Using worker: sync
+[2024-07-22 06:31:50 +0000] [16721] [INFO] Booting worker with pid: 16721
+[2024-07-22 06:31:50 +0000] [16722] [INFO] Booting worker with pid: 16722
+[2024-07-22 06:31:50 +0000] [16726] [INFO] Booting worker with pid: 16726
+[2024-07-22 06:31:50 +0000] [16727] [INFO] Booting worker with pid: 16727
+[2024-07-22 06:31:51 +0000] [16731] [INFO] Booting worker with pid: 16731
+[2024-07-22 06:31:51 +0000] [16732] [INFO] Booting worker with pid: 16732
+[2024-07-22 06:31:51 +0000] [16736] [INFO] Booting worker with pid: 16736
+[2024-07-22 06:31:51 +0000] [16737] [INFO] Booting worker with pid: 16737
+[2024-07-22 06:31:51 +0000] [16746] [INFO] Booting worker with pid: 16746
+[2024-07-22 06:31:51 +0000] [16748] [INFO] Booting worker with pid: 16748
+[2024-07-22 06:31:57 +0000] [16720] [INFO] Handling signal: int
+[2024-07-22 06:31:57 +0000] [16746] [INFO] Worker exiting (pid: 16746)
+[2024-07-22 06:31:57 +0000] [16731] [INFO] Worker exiting (pid: 16731)
+[2024-07-22 06:31:57 +0000] [16737] [INFO] Worker exiting (pid: 16737)
+[2024-07-22 06:31:57 +0000] [16726] [INFO] Worker exiting (pid: 16726)
+[2024-07-22 06:31:57 +0000] [16727] [INFO] Worker exiting (pid: 16727)
+[2024-07-22 06:31:57 +0000] [16722] [INFO] Worker exiting (pid: 16722)
+[2024-07-22 06:31:57 +0000] [16736] [INFO] Worker exiting (pid: 16736)
+[2024-07-22 06:31:57 +0000] [16748] [INFO] Worker exiting (pid: 16748)
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16737) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16722) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16727) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16731) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16748) was sent SIGINT!
+--- Logging error ---
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16736) was sent SIGINT!
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1568, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1168, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1081, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 236, in run
+    super().run()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 261, in handle_int
+    self.stop(False)
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 396, in stop
+    time.sleep(0.1)
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 242, in handle_chld
+    self.reap_workers()
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 554, in reap_workers
+    self.log.error(msg)
+  File "/home/ubuntu/feet_api/feet-measurement-report-generator-main/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 272, in error
+    self.error_log.error(msg, *args, **kwargs)
+Message: 'Worker (pid:16748) was sent SIGINT!'
+Arguments: ()
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16726) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16721] [INFO] Worker exiting (pid: 16721)
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16721) was sent SIGINT!
+[2024-07-22 06:31:58 +0000] [16732] [INFO] Worker exiting (pid: 16732)
+[2024-07-22 06:31:58 +0000] [16720] [ERROR] Worker (pid:16732) was sent SIGINT!
+[2024-07-22 06:32:27 +0000] [16720] [INFO] Shutting down: Master
+[2024-07-22 06:33:21 +0000] [16792] [INFO] Starting gunicorn 22.0.0
+[2024-07-22 06:33:21 +0000] [16792] [INFO] Listening at: http://0.0.0.0:5000 (16792)
+[2024-07-22 06:33:21 +0000] [16792] [INFO] Using worker: sync
+[2024-07-22 06:33:21 +0000] [16793] [INFO] Booting worker with pid: 16793
+[2024-07-22 06:33:21 +0000] [16794] [INFO] Booting worker with pid: 16794
+[2024-07-22 06:33:21 +0000] [16795] [INFO] Booting worker with pid: 16795
+[2024-07-22 06:33:21 +0000] [16802] [INFO] Booting worker with pid: 16802
+[2024-07-22 06:33:21 +0000] [16803] [INFO] Booting worker with pid: 16803
+[2024-07-22 06:33:21 +0000] [16807] [INFO] Booting worker with pid: 16807
+[2024-07-22 06:33:22 +0000] [16811] [INFO] Booting worker with pid: 16811
+[2024-07-22 06:33:22 +0000] [16812] [INFO] Booting worker with pid: 16812
+[2024-07-22 06:33:22 +0000] [16813] [INFO] Booting worker with pid: 16813
+[2024-07-22 06:33:22 +0000] [16814] [INFO] Booting worker with pid: 16814
+[2024-07-22 06:44:30 +0000] [16792] [INFO] Handling signal: term
+[2024-07-22 06:44:30 +0000] [16811] [INFO] Worker exiting (pid: 16811)
+[2024-07-22 06:44:30 +0000] [16807] [INFO] Worker exiting (pid: 16807)
+[2024-07-22 06:44:30 +0000] [16803] [INFO] Worker exiting (pid: 16803)
+[2024-07-22 06:44:30 +0000] [16812] [INFO] Worker exiting (pid: 16812)
+[2024-07-22 06:44:30 +0000] [16802] [INFO] Worker exiting (pid: 16802)
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16795) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16807) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16812) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16814) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16813) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16793) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16802) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16803) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16794) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [ERROR] Worker (pid:16811) was sent SIGHUP!
+[2024-07-22 06:44:30 +0000] [16792] [INFO] Shutting down: Master

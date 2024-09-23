@@ -1,0 +1,9 @@
+opencv-python
+numpy
+matplotlib
+fpdf
+ultralytics
+flask
+rembg
+matplotlib
+gunicorn
